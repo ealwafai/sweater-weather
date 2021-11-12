@@ -1,0 +1,5 @@
+Metrics/AbcSize:
+  Max: 23
+
+Metrics/MethodLength:
+  Max: 11
