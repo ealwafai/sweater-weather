@@ -9,12 +9,18 @@ gem 'rails', '~> 5.2.6'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+gem 'faraday'
+gem 'date'
+gem 'json'
+gem 'jsonapi-serializer'
+gem 'factory_bot_rails'
+gem 'bcrypt', '~> 3.1.7'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -29,12 +35,22 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # gem 'rack-cors'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
+  gem 'faker'
+  gem 'rubocop-rails'
+  gem 'figaro'
 end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
+end
+
+group :test do
+  gem 'rspec-rails', '~> 4.0.1'
+  gem 'simplecov'
+  gem 'shoulda-matchers'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 
