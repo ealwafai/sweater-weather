@@ -6,8 +6,8 @@ class LocationService
       end
     end
 
-    def get_lat_long(city_state)
-      response = conn.get("address?location=#{city_state}")
+    def get_lat_long(location)
+      response = conn.get("address?location=#{location}")
       JSON.parse(response.body, symbolize_names: true)
     end
   end

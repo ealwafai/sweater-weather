@@ -12,7 +12,8 @@ RSpec.describe ForecastService do
 
     describe '.get_forecast', :vcr do
       it 'returns weather for a specific location based on lat and long' do
-        response = ForecastService.get_forecast('39.738453', '-104.984853')
+        location = LocationFacade.get_lat_long('denver,co')
+        response = ForecastService.get_forecast(location)
 
         expect(response).to be_a(Hash)
         expect(response.keys).to eq([:lat, :lon, :timezone, :timezone_offset, :current, :hourly, :daily])

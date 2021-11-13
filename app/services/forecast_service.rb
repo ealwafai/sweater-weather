@@ -6,10 +6,10 @@ class ForecastService
       end
     end
 
-    def get_forecast(lat, lon)
+    def get_forecast(location)
       response = conn.get("/data/2.5/onecall") do |req|
-        req.params['lat'] = lat
-        req.params['lon'] = lon
+        req.params['lat'] = location.latitude
+        req.params['lon'] = location.longitude
         req.params['units'] = 'imperial'
         req.params['exclude'] = 'minutely'
       end
