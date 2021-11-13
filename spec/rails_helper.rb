@@ -85,4 +85,5 @@ VCR.configure do |config|
   config.configure_rspec_metadata!
   config.filter_sensitive_data('DONT_SHARE_MY_SECRET_KEY') { ENV['mapquest_key'] }
   config.filter_sensitive_data('DONT_SHARE_MY_SECRET_KEY') { ENV['forecast_key'] }
+  config.filter_sensitive_data('DONT_SHARE_MY_SECRET_KEY') { ENV['unsplash_key'] }
 end
