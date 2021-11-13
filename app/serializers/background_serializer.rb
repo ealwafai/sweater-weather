@@ -1,5 +1,4 @@
 class BackgroundSerializer
-
   def self.get_background(background, location)
     null = nil
     {
