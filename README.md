@@ -1,6 +1,8 @@
 # Sweater Weather
+<br>
+<img src="https://user-images.githubusercontent.com/77654906/141661694-244da0a6-e8b6-4de4-980a-260d56c5f8c4.jpeg" width="85%">
 
-![background](https://user-images.githubusercontent.com/77654906/141661694-244da0a6-e8b6-4de4-980a-260d56c5f8c4.jpeg)
+<br>
 
 ## Table of Contents
 
