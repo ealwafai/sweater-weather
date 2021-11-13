@@ -10,6 +10,7 @@
 - [Setup](#setup)
 - [System Dependencies](#system-dependencies)
 - [Configuration](#configuration)
+- [Endpoints](#endpoints)
 - [Tools Used](#tools-used)
 - [Contributors](#contributors)
 
@@ -18,7 +19,7 @@
 Sweater Weather is a 1 week, single person project, during Mod 3 of 4 for Turing School's Back End Engineering Program.
 
 
-Find the project spec [here](https://backend.turing.edu/module3/projects/rails_engine/)
+Find the project spec [here](https://backend.turing.edu/module3/projects/sweater_weather/requirements)
 
 ## Learning Goals
 
@@ -105,6 +106,9 @@ forecast_key: <your_open_weather_api_key>
 mapquest_key: <your_mapquest_api_key>
 unsplash_key: Client-ID <your_unsplash_api_key>
 ```
+
+## Endpoints
+
 
 ## Tools Used
 
