@@ -1,5 +1,7 @@
 # Sweater Weather
 
+![background](https://user-images.githubusercontent.com/77654906/141661694-244da0a6-e8b6-4de4-980a-260d56c5f8c4.jpeg)
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -15,7 +17,6 @@
 
 Sweater Weather is a 1 week, single person project, during Mod 3 of 4 for Turing School's Back End Engineering Program.
 
-The scenario is that I am working for a company developing an E-Commerce Application. The team is working in a service-oriented architecture, meaning the front and back ends of this application are separate and communicate via APIs. My job is to expose the data that powers the site through an API that the front end will consume.
 
 Find the project spec [here](https://backend.turing.edu/module3/projects/rails_engine/)
 
