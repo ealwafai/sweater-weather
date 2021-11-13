@@ -1,4 +1,4 @@
-class LatLongService
+class LocationService
   class << self
     def conn
       Faraday.new("http://www.mapquestapi.com/geocoding/v1/") do |f|

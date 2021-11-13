@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe LatLongService do
+RSpec.describe LocationService do
   describe 'class methods' do
     describe '.conn' do
       it 'establishes connection to the mapquest geocoding api' do
-        connection = LatLongService.conn
+        connection = LocationService.conn
 
         expect(connection.params).to include('key')
       end
@@ -13,7 +13,7 @@ RSpec.describe LatLongService do
     describe '.get_lat_long' do
       context 'happy path' do
         it 'returns forecast for a specific city', :vcr do
-          response = LatLongService.get_lat_long('Denver, CO')
+          response = LocationService.get_lat_long('Denver, CO')
 
           expect(response).to be_a(Hash)
           expect(response).to have_key(:info)
@@ -31,7 +31,7 @@ RSpec.describe LatLongService do
 
       context 'sad path' do
         it 'returns an empty array if an invalid location is provided', :vcr do
-          response = LatLongService.get_lat_long('fghfgh, fghfgh')
+          response = LocationService.get_lat_long('fghfgh, fghfgh')
 
           expect(response[:results].first[:locations][0][:adminArea5]).to eq("")
         end
