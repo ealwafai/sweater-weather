@@ -1,16 +1,17 @@
-# Sweater Weather WIP
+# Sweater Weather
 
 ## Table of Contents
 
-- [About this Project](#about-this-project)
+- [Overview](#overview)
 - [Learning Goals](#learning-goals)
 - [Local Setup](#local-setup)
-- [Project Configurations](#project-configurations)
-- [Database Schema](#database-schema)
+- [Setup](#setup)
+- [System Dependencies](#system-dependencies)
+- [Configuration](#configuration)
 - [Tools Used](#tools-used)
 - [Contributors](#contributors)
 
-## About this Project
+## Overview
 
 Sweater Weather is a 1 week, single person project, during Mod 3 of 4 for Turing School's Back End Engineering Program.
 
@@ -20,11 +21,11 @@ Find the project spec [here](https://backend.turing.edu/module3/projects/rails_e
 
 ## Learning Goals
 
-* Expose an API ⭐ ⭐ ⭐
-* Use serializers to format JSON responses ⭐ ⭐ ⭐
-* Test API exposure ⭐ ⭐ ⭐
-* Compose advanced ActiveRecord queries to analyze information stored in SQL databases ⭐ ⭐
-* Write basic SQL statements without the assistance of an ORM ⭐
+* Expose an API that aggregates data from multiple external APIs
+* Expose an API that requires an authentication token
+* Expose an API for CRUD functionality
+* Determine completion criteria based on the needs of other developers
+* Research, select, and consume an API based on your needs as a developer
 
 ## Local Setup
 
@@ -39,7 +40,7 @@ This project requires Ruby 2.7.2.
 * Run the test suite with `bundle exec rspec`.
 * Run your development server with `rails s` to see the app in action.
 
-## Project Configurations
+## Setup
 * Ruby version
 ```
 $ ruby -v
@@ -54,9 +55,7 @@ Rails 5.2.6
 
 * Database creation
 ```
-$ rails db:{drop,create,migrate,seed}
-...
-$ rails db:schema:dump
+$ rails db:{create,migrate}
 ```
 
 * How to run the test suite
@@ -78,28 +77,51 @@ Puma starting in single mode...
 Use Ctrl-C to stop
 ```
 
-## Database Schema
+## System Dependencies
 
-<img width="1421" alt="Screen Shot 2021-10-28 at 2 18 37 PM" src="https://user-images.githubusercontent.com/77654906/139321317-91e062e3-91c2-4787-b568-89481ca47515.png">
+Sign up for the MapQuest Developer, Open Weather Map, and Unsplash api keys.
 
- 
+* MapQuest Developer API
+  * Sign up for an account with MapQuest
+  * Then, get your key here then select Create a New Key and fill in required fields.
+* Open Weather Map API
+  * Sign up
+  * Go to your API keys, fill in API key name, and select Generate.
+* Unsplash API
+  * First, login or join
+  * Then register your application. Go to your apps, click New Application, and fill in the required details.
+  * NOTE: All applications must follow the API Guidelines, including properly providing attribution for the photographer and Unsplash.
+
+
+## Configuration
+
+* Clone this repo
+* Run bundle
+* Run bundle exec figaro install
+* Open your config/application.yml file in your code editor (You may have to open it manually). Then, add to the bottom of the config/application.yml file your api keys:
+```
+forecast_key: <your_open_weather_api_key>
+mapquest_key: <your_mapquest_api_key>
+unsplash_key: Client-ID <your_unsplash_api_key>
+```
+
 ## Tools Used
 
 | Development | Testing       | Gems          |
 |   :----:    |    :----:     |    :----:     |
 | Ruby 2.7.2  | RSpec         | SimpleCov     |
-| Rails       | Rubocop       | Pry           |
-| HTML5       |               | Bootstrap     |
-| CSS3        |               | ShouldaMatcher|
-| Github      |               | VCR           |
-| Atom        |               | Figaro        |
-| Postman     |               | PostgresQL    |
-| Travis      |               | Postico       |
+| Rails 5.2.6 | Rubocop       | Pry           |
+| Github      |               | Bootstrap     |
+| Atom        |               | ShouldaMatcher|
+| Postman     |               | VCR           |
+|             |               | Webmock       |
+|             |               | PostgresQL    |
+|             |               | Postico       |
 |             |               | Faker         |
 |             |               | Factorybot    |
 |             |               | Faraday       |
 |             |               | Bcrypt        |
-|             |               |               |
+|             |               | Figaro        |
 |             |               |               |
 
 
