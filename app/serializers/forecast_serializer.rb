@@ -1,5 +1,4 @@
 class ForecastSerializer
-
   def self.get_weather(forecast)
     null = nil
     {
