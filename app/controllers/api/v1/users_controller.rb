@@ -11,15 +11,13 @@ class Api::V1::UsersController < ApplicationController
     new_user.save!
 
     render json: UserSerializer.generate_api_key(new_user), status: :created
-  rescue ActiveRecord::RecordInvalid
+    rescue ActiveRecord::RecordInvalid
     email_error
   end
 
   def api_key(new_user)
     new_user.api_key = SecureRandom.alphanumeric(27)
     return unless new_user.api_key == User.find_by(api_key: new_user.api_key)
-
-    new_user.update(api_key: SecureRandom.alphanumeric(27))
   end
 
   private
