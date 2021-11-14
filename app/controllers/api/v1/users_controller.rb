@@ -11,7 +11,7 @@ class Api::V1::UsersController < ApplicationController
     new_user.save!
 
     render json: UserSerializer.generate_api_key(new_user), status: :created
-    rescue ActiveRecord::RecordInvalid
+  rescue ActiveRecord::RecordInvalid
     email_error
   end
 

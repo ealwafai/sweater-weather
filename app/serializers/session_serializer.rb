@@ -1,5 +1,4 @@
 class SessionSerializer
-
   def self.authenticated_user(user)
     {
       data: {
