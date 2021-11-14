@@ -18,8 +18,6 @@ class Api::V1::UsersController < ApplicationController
   def api_key(new_user)
     new_user.api_key = SecureRandom.alphanumeric(27)
     return unless new_user.api_key == User.find_by(api_key: new_user.api_key)
-
-    new_user.update(api_key: SecureRandom.alphanumeric(27))
   end
 
   private
