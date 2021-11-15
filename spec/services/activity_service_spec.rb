@@ -20,7 +20,6 @@ RSpec.describe ActivityService do
         expect(response[:activity]).to be_a(String)
         expect(response[:type]).to be_a(String)
         expect(response[:participants]).to be_an(Integer)
-        # expect(response[:price]).to be_a(Integer)
         expect(response[:link]).to be_a(String)
         expect(response[:key]).to be_a(String)
         expect(response[:accessibility]).to be_a(Float)
