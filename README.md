@@ -20,10 +20,11 @@
 
 Sweater Weather is a 1 week, single person project, during Mod 3 of 4 for Turing School's Back End Engineering Program. It is a web application that allows users to plan for a road trip by checking the weather forecast at their destination city.
 
-This API consumes three third-party APIs and aggregates the data to return the requested information.
+This API consumes four third-party APIs and aggregates the data to return the requested information.
 * Unsplash developers for utilization of pictures.
 * Mapquest Developer to give directions for a road trip and the trip timing along with latitude and longitude.
-* Openweather API which was used to get the weather for a desired location or for the road trip
+* Openweather API to get the weather for a desired location or for the road trip
+* Bored API to get random activity
 
 Find the project spec [here](https://backend.turing.edu/module3/projects/sweater_weather/requirements)
 
