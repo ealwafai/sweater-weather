@@ -285,8 +285,12 @@ Accept: application/json
 
 ### Activities Search
 Request
+```
+GET /api/v1/activities?destination=chicago,il
 
- `GET /api/v1/activities?destination=chicago,il`
+Content-Type: application/json
+Accept: application/json
+```
 
 #### 200 Response
 ```
