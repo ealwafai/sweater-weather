@@ -119,17 +119,199 @@ Content-Type: application/json
 Accept: application/json
 ```
 
+#### 200 Response
+```
+{
+    "data": {
+        "id": null,
+        "type": "forecast",
+        "attributes": {
+            "current_weather": {
+                "datetime": "2021-11-16 23:08:26 UTC",
+                "sunrise": "2021-11-16 13:46:09 UTC",
+                "sunset": "2021-11-16 23:43:41 UTC",
+                "temperature": 64.56,
+                "feels_like": 61.56,
+                "humidity": 18,
+                "uvi": 0.2,
+                "visibility": 10000,
+                "conditions": "overcast clouds",
+                "icon": "04d"
+            },
+            "daily_weather": [
+                {
+                    "date": "2021-11-16 18:00:00 UTC",
+                    "sunrise": "2021-11-16 13:46:09 UTC",
+                    "sunset": "2021-11-16 23:43:41 UTC",
+                    "max_temp": 66.65,
+                    "min_temp": 46.8,
+                    "conditions": "overcast clouds",
+                    "icon": "04d"
+                },
+                {
+                    "date": "2021-11-17 18:00:00 UTC",
+                    "sunrise": "2021-11-17 13:47:17 UTC",
+                    "sunset": "2021-11-17 23:42:57 UTC",
+                    "max_temp": 42.98,
+                    "min_temp": 34.63,
+                    "conditions": "broken clouds",
+                    "icon": "04d"
+                },
+                {
+                    "date": "2021-11-18 18:00:00 UTC",
+                    "sunrise": "2021-11-18 13:48:26 UTC",
+                    "sunset": "2021-11-18 23:42:16 UTC",
+                    "max_temp": 49.24,
+                    "min_temp": 32.27,
+                    "conditions": "clear sky",
+                    "icon": "01d"
+                },
+                {
+                    "date": "2021-11-19 18:00:00 UTC",
+                    "sunrise": "2021-11-19 13:49:34 UTC",
+                    "sunset": "2021-11-19 23:41:36 UTC",
+                    "max_temp": 61.65,
+                    "min_temp": 43.93,
+                    "conditions": "overcast clouds",
+                    "icon": "04d"
+                },
+                {
+                    "date": "2021-11-20 18:00:00 UTC",
+                    "sunrise": "2021-11-20 13:50:41 UTC",
+                    "sunset": "2021-11-20 23:40:58 UTC",
+                    "max_temp": 58.75,
+                    "min_temp": 44.8,
+                    "conditions": "overcast clouds",
+                    "icon": "04d"
+                }
+            ],
+            "hourly_weather": [
+                {
+                    "time": "2021-11-16 23:00:00 UTC",
+                    "temperature": 64.56,
+                    "conditions": "overcast clouds",
+                    "icon": "04d"
+                },
+                {
+                    "time": "2021-11-17 00:00:00 UTC",
+                    "temperature": 63.77,
+                    "conditions": "overcast clouds",
+                    "icon": "04n"
+                },
+                {
+                    "time": "2021-11-17 01:00:00 UTC",
+                    "temperature": 62.2,
+                    "conditions": "overcast clouds",
+                    "icon": "04n"
+                },
+                {
+                    "time": "2021-11-17 02:00:00 UTC",
+                    "temperature": 60.12,
+                    "conditions": "broken clouds",
+                    "icon": "04n"
+                },
+                {
+                    "time": "2021-11-17 03:00:00 UTC",
+                    "temperature": 57.11,
+                    "conditions": "broken clouds",
+                    "icon": "04n"
+                },
+                {
+                    "time": "2021-11-17 04:00:00 UTC",
+                    "temperature": 53.19,
+                    "conditions": "scattered clouds",
+                    "icon": "03n"
+                },
+                {
+                    "time": "2021-11-17 05:00:00 UTC",
+                    "temperature": 48.88,
+                    "conditions": "few clouds",
+                    "icon": "02n"
+                },
+                {
+                    "time": "2021-11-17 06:00:00 UTC",
+                    "temperature": 46.8,
+                    "conditions": "few clouds",
+                    "icon": "02n"
+                }
+            ]
+        }
+    }
+}
+```
+
 ### Background Image for a City
 #### Request
 ```
-GET /api/v1/forecast?location=denver,co
+GET /api/v1/backgrounds?location=denver,co
+
 Content-Type: application/json
 Accept: application/json
+```
+
+#### 200 Response
+```
+{
+    "data": {
+        "id": null,
+        "type": "image",
+        "attributes": {
+            "image": {
+                "description": {
+                    "description": "8pm curfew was lifted.",
+                    "alt_description": null,
+                    "location": "denver,co\n"
+                },
+                "image_url": "https://images.unsplash.com/photo-1634507307973-9df1b23f5701?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzU0MTF8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkNjb3xlbnwxfDB8fHwxNjM3MTA0MzY5&ixlib=rb-1.2.1&q=80&w=1080",
+                "credit": {
+                    "source": "upsplash.com",
+                    "photographer": "Dillon Wanner",
+                    "profile": "https://unsplash.com/@dillydallying",
+                    "logo": "https://unsplash.com/blog/content/images/max/2560/1-VnKoValwGK3-d1bZhD6sVA.jpeg",
+                    "utm_source": "Sweater Weather",
+                    "utm_medium": "referral"
+                }
+            }
+        }
+    }
+}
+
 ```
 
 ### Activities Search
 - Request
 - `GET /api/v1/activities?destination=chicago,il`
+
+#### 200 Response
+```
+{
+    "data": {
+        "id": null,
+        "type": "activities",
+        "attributes": {
+            "destination": "chicago,il",
+            "forecast": {
+                "summary": "broken clouds",
+                "temperature": "47.07 F"
+            },
+            "activities": [
+                {
+                    "title": "Go to a nail salon",
+                    "type": "relaxation",
+                    "participants": 1,
+                    "price": 0.4
+                },
+                {
+                    "title": "Make bread from scratch",
+                    "type": "cooking",
+                    "participants": 1,
+                    "price": 0.2
+                }
+            ]
+        }
+    }
+}
+```
 
 ### User Registration
 #### Request
@@ -141,6 +323,20 @@ Accept: application/json
   "email": "example@example.com",
   "password": "password",
   "password_confirmation": "password"
+}
+```
+
+#### 200 Response
+```
+{
+    "data": {
+        "type": "users",
+        "id": "2",
+        "attributes": {
+            "email": "123@example.com",
+            "api_key": "vCYWVWLUjcNqIKLen0pZAgYHJkv"
+        }
+    }
 }
 ```
 
@@ -156,6 +352,11 @@ Accept: application/json
 }
 ```
 
+#### 200 Response
+```
+
+```
+
 ### Road Trip
 #### Request
 ```
@@ -166,9 +367,24 @@ body:
 {
   "origin": "Denver,CO",
   "destination": "Pueblo,CO",
-  "api_key": "fgh983hy48thw9begh98h4537jr"
+  "api_key": "vCYWVWLUjcNqIKLen0pZAgYHJkv"
 }
 ```
+
+#### 200 Response
+```
+{
+    "data": {
+        "type": "users",
+        "id": "2",
+        "attributes": {
+            "email": "123@example.com",
+            "api_key": "vCYWVWLUjcNqIKLen0pZAgYHJkv"
+        }
+    }
+}
+```
+
 
 ## Tools Used
 
