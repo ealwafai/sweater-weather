@@ -279,8 +279,9 @@ Accept: application/json
 ```
 
 ### Activities Search
-- Request
-- `GET /api/v1/activities?destination=chicago,il`
+Request
+
+ `GET /api/v1/activities?destination=chicago,il`
 
 #### 200 Response
 ```
@@ -320,7 +321,7 @@ POST /api/v1/users
 Content-Type: application/json
 Accept: application/json
 {
-  "email": "example@example.com",
+  "email": "123@example.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -347,14 +348,23 @@ POST /api/v1/sessions
 Content-Type: application/json
 Accept: application/json
 {
-  "email": "example@example.com",
+  "email": "123@example.com",
   "password": "password"
 }
 ```
 
 #### 200 Response
 ```
-
+{
+    "data": {
+        "type": "users",
+        "id": "2",
+        "attributes": {
+            "email": "123@example.com",
+            "api_key": "vCYWVWLUjcNqIKLen0pZAgYHJkv"
+        }
+    }
+}
 ```
 
 ### Road Trip
@@ -375,11 +385,16 @@ body:
 ```
 {
     "data": {
-        "type": "users",
-        "id": "2",
+        "id": null,
+        "type": "roadtrip",
         "attributes": {
-            "email": "123@example.com",
-            "api_key": "vCYWVWLUjcNqIKLen0pZAgYHJkv"
+            "start_city": "Denver,CO",
+            "end_city": "Pueblo,CO",
+            "travel_time": "1 hr, 45 min",
+            "weather_at_eta": {
+                "temperature": 71.37,
+                "conditions": "clear sky"
+            }
         }
     }
 }
