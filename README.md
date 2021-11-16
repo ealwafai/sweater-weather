@@ -420,18 +420,16 @@ body:
 |   :----:    |    :----:     |    :----:     |
 | Ruby 2.7.2  | RSpec         | SimpleCov     |
 | Rails 5.2.6 | Rubocop       | Pry           |
-| Github      |               | Bootstrap     |
+| Github      |               | Figaro        |
 | Atom        |               | ShouldaMatcher|
 | Postman     |               | VCR           |
 |             |               | Webmock       |
 |             |               | PostgresQL    |
 |             |               | Postico       |
-|             |               | Faker         |
-|             |               | Factorybot    |
 |             |               | Faraday       |
 |             |               | Bcrypt        |
-|             |               | Figaro        |
 |             |               |               |
+
 
 
 ## Contributors
