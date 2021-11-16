@@ -31,15 +31,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '138'
+      - '125'
       Etag:
-      - W/"8a-Mrk6CtmkVgvDvUDkJ6nTwpXtuyg"
+      - W/"7d-5HiQhd2gjPgBArJprGLiYYN7LT8"
       Date:
-      - Mon, 15 Nov 2021 18:20:31 GMT
+      - Tue, 16 Nov 2021 19:35:54 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"activity":"Plan a trip to another country","type":"recreational","participants":1,"price":0,"link":"","key":"5554727","accessibility":0}'
-  recorded_at: Mon, 15 Nov 2021 18:20:31 GMT
+      string: '{"activity":"Go to the gym","type":"recreational","participants":1,"price":0.2,"link":"","key":"4387026","accessibility":0.1}'
+  recorded_at: Tue, 16 Nov 2021 19:35:54 GMT
 recorded_with: VCR 6.0.0

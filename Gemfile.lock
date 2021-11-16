@@ -55,7 +55,7 @@ GEM
     crack (0.4.5)
       rexml
     crass (1.0.6)
-    date (3.2.0)
+    date (3.2.1)
     diff-lcs (1.4.4)
     docile (1.4.0)
     erubi (1.10.0)
@@ -64,8 +64,6 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
-    faker (2.19.0)
-      i18n (>= 1.6, < 2)
     faraday (1.8.0)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -175,7 +173,7 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.3)
-    rubocop (1.22.3)
+    rubocop (1.23.0)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -209,7 +207,7 @@ GEM
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.3.0)
+    sprockets-rails (3.4.0)
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
@@ -235,7 +233,6 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   date
   factory_bot_rails
-  faker
   faraday
   figaro
   json
