@@ -120,6 +120,7 @@ unsplash_key: Client-ID <your_unsplash_api_key>
 #### Request
 ```
 GET /api/v1/forecast?location=denver,co
+
 Content-Type: application/json
 Accept: application/json
 ```
@@ -327,6 +328,7 @@ Accept: application/json
 #### Request
 ```
 POST /api/v1/users
+
 Content-Type: application/json
 Accept: application/json
 {
@@ -354,6 +356,7 @@ Accept: application/json
 #### Request
 ```
 POST /api/v1/sessions
+
 Content-Type: application/json
 Accept: application/json
 {
@@ -380,6 +383,7 @@ Accept: application/json
 #### Request
 ```
 POST /api/v1/road_trip
+
 Content-Type: application/json
 Accept: application/json
 body:
