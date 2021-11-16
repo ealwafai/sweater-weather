@@ -111,6 +111,64 @@ unsplash_key: Client-ID <your_unsplash_api_key>
 
 ## Endpoints
 
+### Retrieve Weather for a City
+#### Request
+```
+GET /api/v1/forecast?location=denver,co
+Content-Type: application/json
+Accept: application/json
+```
+
+### Background Image for a City
+#### Request
+```
+GET /api/v1/forecast?location=denver,co
+Content-Type: application/json
+Accept: application/json
+```
+
+### Activities Search
+- Request
+- `GET /api/v1/activities?destination=chicago,il`
+
+### User Registration
+#### Request
+```
+POST /api/v1/users
+Content-Type: application/json
+Accept: application/json
+{
+  "email": "example@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+```
+
+### Login
+#### Request
+```
+POST /api/v1/sessions
+Content-Type: application/json
+Accept: application/json
+{
+  "email": "example@example.com",
+  "password": "password"
+}
+```
+
+### Road Trip
+#### Request
+```
+POST /api/v1/road_trip
+Content-Type: application/json
+Accept: application/json
+body:
+{
+  "origin": "Denver,CO",
+  "destination": "Pueblo,CO",
+  "api_key": "fgh983hy48thw9begh98h4537jr"
+}
+```
 
 ## Tools Used
 
