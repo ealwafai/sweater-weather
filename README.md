@@ -100,7 +100,9 @@ Sign up for the MapQuest Developer, Open Weather Map, and Unsplash api keys.
   * First, login or join
   * Then register your application. Go to your apps, click New Application, and fill in the required details.
   * NOTE: All applications must follow the API Guidelines, including properly providing attribution for the photographer and Unsplash.
-
+* Bored API
+  * Sign up
+  * Go to your API keys, fill in API key name, and select Generate.
 
 ## Configuration
 
