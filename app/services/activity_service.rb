@@ -5,7 +5,7 @@ class ActivityService
     end
 
     def get_activity(type)
-      response = conn.get("/api/activity") do |req|
+      response = conn.get('/api/activity') do |req|
         req.params['type'] = type
       end
 

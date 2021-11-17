@@ -31,15 +31,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '139'
+      - '185'
       Etag:
-      - W/"8b-SUXeae+oRy2gJFTSbAimaNeeTwE"
+      - W/"b9-1oxV7mbxydb0zdPPmwlJCx/t3FM"
       Date:
-      - Tue, 16 Nov 2021 23:39:42 GMT
+      - Wed, 17 Nov 2021 01:18:03 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"activity":"Think of a new business idea","type":"recreational","participants":1,"price":0,"link":"","key":"6808057","accessibility":0.05}'
-  recorded_at: Tue, 16 Nov 2021 23:39:42 GMT
+      string: '{"activity":"Learn how to use a french press","type":"recreational","participants":1,"price":0.3,"link":"https://en.wikipedia.org/wiki/French_press","key":"4522866","accessibility":0.3}'
+  recorded_at: Wed, 17 Nov 2021 01:18:03 GMT
 recorded_with: VCR 6.0.0
