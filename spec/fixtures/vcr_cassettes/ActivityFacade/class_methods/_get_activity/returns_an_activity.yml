@@ -31,15 +31,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '125'
+      - '185'
       Etag:
-      - W/"7d-5HiQhd2gjPgBArJprGLiYYN7LT8"
+      - W/"b9-1oxV7mbxydb0zdPPmwlJCx/t3FM"
       Date:
-      - Tue, 16 Nov 2021 19:35:54 GMT
+      - Wed, 17 Nov 2021 01:18:03 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"activity":"Go to the gym","type":"recreational","participants":1,"price":0.2,"link":"","key":"4387026","accessibility":0.1}'
-  recorded_at: Tue, 16 Nov 2021 19:35:54 GMT
+      string: '{"activity":"Learn how to use a french press","type":"recreational","participants":1,"price":0.3,"link":"https://en.wikipedia.org/wiki/French_press","key":"4522866","accessibility":0.3}'
+  recorded_at: Wed, 17 Nov 2021 01:18:03 GMT
 recorded_with: VCR 6.0.0

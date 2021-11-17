@@ -5,8 +5,9 @@ Rails.application.routes.draw do
       resources :backgrounds, only: :index
       resources :users, only: :create
       resources :sessions, only: :create
+      resources :road_trip, only: :create, controller: :roadtrips
+      
       get '/activities', to: 'activities#index'
-      resources :road_trip, only: [:create], controller: :roadtrips
     end
   end
 end

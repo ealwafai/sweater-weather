@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Registration API' do
   it 'creates user and generates unique api key that belongs to user' do
     user_params = {
-      email: 'whatever@example.com',
+      email: 'example@example.com',
       password: 'password',
       password_confirmation: 'password'
     }
@@ -38,7 +38,7 @@ describe 'Registration API' do
 
   it 'returns 400 status if password and password confirmation do not match' do
     user_params = {
-      email: 'whatever@example.com',
+      email: 'example@example.com',
       password: 'password',
       password_confirmation: 'differentpassword'
     }
@@ -79,7 +79,7 @@ describe 'Registration API' do
   end
 
   it 'returns 400 status if email has already been taken' do
-    User.create!(email: 'whatever@example.com',
+    User.create!(email: 'example@example.com',
                  password: 'password',
                  password_confirmation: 'password',
                  api_key: 'ddf5g1d6f5gdf65g4dfg54dgd')

@@ -3,6 +3,7 @@ class RoadtripService
     def conn
       Faraday.new('https://www.mapquestapi.com') do |f|
         f.params['key'] = ENV['mapquest_key']
+        f.params['outFormat'] = 'json'
       end
     end
 
@@ -11,7 +12,6 @@ class RoadtripService
         req.params['from'] = origin
         req.params['to'] = destination
         req.params['ambiguities'] = 'ignore'
-        req.params['outFormat'] = 'json'
         req.params['routeType'] = 'fastest'
         req.params['avoidTimedConditions'] = false
         req.params['doReverseGeocode'] = false
@@ -20,6 +20,5 @@ class RoadtripService
 
       JSON.parse(response.body, symbolize_names: true)
     end
-
   end
 end
